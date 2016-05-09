@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/feedbackfruits/bepstore-ui.png?label=ready&title=Ready)](https://waffle.io/feedbackfruits/bepstore-ui)
 # Bepstore-ui
 
 This README outlines the details of collaborating on this Ember application.
