@@ -1,0 +1,22 @@
+machine:
+  pre:
+    - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+  node:
+    version: 5.2.0
+dependencies:
+  post:
+    - bower install --config.interactive=false
+  cache_directories:
+    - "./bower_components"
+test:
+  post:
+    - npm run coverage
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - npm run deploy production
+  staging:
+    branch: master
+    commands:
+      - npm run deploy staging
