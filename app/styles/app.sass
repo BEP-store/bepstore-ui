@@ -1,9 +1,20 @@
 $border: 2px solid black
 $size: 80%
+$spacevertical: 30px
+$spacehorizontal: 7.5%
 
 body
  text-align: center
  width: 100%
+
+.circle
+ background-color: black
+ color: white
+ border-radius: 50%
+ padding-top: 45px
+ height: 55px
+ width: 100px
+ position: absolute
 
 .goal_container
  display: inline-block
@@ -11,19 +22,53 @@ body
  width: $size
  margin-left: (100% - $size)/2
  margin-right: (100% - $size)/2
- margin-bottom: 2px
+ margin-bottom: 5px
 
 .goal_left
  border-right: $border
- width: 60%
+ width: 75%
+ height: 100%
+ float: left
+
+.goal_right
+ width: 24%
  float: left
 
 .goal_con_upper
+ width: 100%
+ height: 30px
+ padding-top: 5px
  font-size: 20px
+ display: inline-block
+ border-bottom: $border
+ margin-bottom: -6px
 
 .goal_con_lower
-  display: none
-  border-top: $border
+ width: 100%
+ height: 300px
+ display: inline-block
 
 .goal_title
  font-weight: bold
+
+.goal_coret
+ position: relative
+ height: 100%
+ h2
+  margin-top: 5px
+
+#PO
+ left: $spacehorizontal
+ top: $spacevertical + 5px
+
+#HD
+ right: $spacehorizontal
+ top: $spacevertical + 5px
+
+#HFE
+ left: $spacehorizontal
+ bottom: $spacevertical
+
+#HBE
+ right: $spacehorizontal
+ bottom: $spacevertical
