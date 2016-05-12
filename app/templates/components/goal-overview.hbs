@@ -16,10 +16,10 @@ Maecenas nec pulvinar nulla, nec elementum tellus. Etiam porta tincidunt tellus,
     </div>
     <div class="goal_coret goal_right">
       <h2>The Big Four</h2>
-      <div id="PO" class="circle">{{goal.po}}</div>
-      <div id="HD" class="circle">{{goal.hd}}</div>
-      <div id="HFE" class="circle">{{goal.hfe}}</div>
-      <div id="HBE" class="circle">{{goal.hbe}}</div>
+      <div id="PO" class="{{unless goal.po "red "}}circle">{{goal-overview-builder::getUser goal.po}}</div>
+      <div id="HD" class="{{unless goal.hd "red "}}circle">{{goal-overview-builder::getUser goal.hd}}</div>
+      <div id="HFE" class="{{unless goal.hfe "red "}}circle">{{goal-overview-builder::getUser goal.hfe}}</div>
+      <div id="HBE" class="{{unless goal.hbe "red "}}circle">{{goal-overview-builder::getUser goal.hbe}}</div>
     </div>
   </div>
 </div>

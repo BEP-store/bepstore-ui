@@ -5,7 +5,7 @@ var testGoals = [{
   title:"test1",
   description:"test1 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
   fase:"init",
-  po:1,
+  po:'',
   hd:2,
   hfe:3,
   hbe:4
