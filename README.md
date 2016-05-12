@@ -1,5 +1,8 @@
-[![Stories in Ready](https://badge.waffle.io/feedbackfruits/bepstore-ui.png?label=ready&title=Ready)](https://waffle.io/feedbackfruits/bepstore-ui)
 # Bepstore-ui
+[![Stories in Ready](https://badge.waffle.io/feedbackfruits/bepstore-ui.png?label=ready&title=Ready)](https://waffle.io/feedbackfruits/bepstore-ui)
+[![Circle CI](https://circleci.com/gh/feedbackfruits/bepstore-ui.svg?style=shield)](https://circleci.com/gh/feedbackfruits/bepstore-ui)
+[![Dependency Status](https://david-dm.org/feedbackfruits/bepstore-ui.svg)](https://david-dm.org/feedbackfruits/bepstore-ui)
+[![devDependency Status](https://david-dm.org/feedbackfruits/bepstore-ui/dev-status.svg)](https://david-dm.org/feedbackfruits/bepstore-ui#info=devDependencies)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
