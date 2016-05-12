@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 var testGoals = [{
   id:1,
-  title:"test1",
+  title:"Language: fill in the blank question creator",
   description:"test1 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
-  fase:"init",
+  progress:"init",
   po:'',
   hd:2,
   hfe:3,
@@ -13,18 +13,18 @@ var testGoals = [{
   id:2,
   title:"test2",
   description:"test2 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
-  fase:"spec-design",
+  progress:"spec-design",
   po:5,
   hd:6,
   hfe:7,
   hbe:8
 }, {
   id:3,
-  title:"test1",
-  description:"test1 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
-  fase:"testing",
+  title:"test3",
+  description:"test3 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
+  progress:"testing",
   po:9,
-  hd:2,
+  hd:'',
   hfe:7,
   hbe:10
 }];

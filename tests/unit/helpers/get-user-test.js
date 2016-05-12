@@ -5,13 +5,13 @@ import {
   it
 } from 'mocha';
 import {
-  goalOverviewBuilder
-} from 'bepstore-ui/helpers/goal-overview-builder';
+  getUser
+} from 'bepstore-ui/helpers/get-user';
 
-describe('GoalOverviewBuilderHelper', function() {
+describe('GetUserHelper', function() {
   // Replace this with your real tests.
   it('works', function() {
-    let result = goalOverviewBuilder(42);
+    let result = getUser(42);
     expect(result).to.be.ok;
   });
 });

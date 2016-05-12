@@ -2,6 +2,7 @@
   <div class="goal_con_upper">
     <div class="goal_title goal_left">
       {{goal.title}}
+      {{check-progress goal.progress}}
     </div>
     <div class="goal_volunteers goal_right">
       Volunteers: 42
@@ -16,10 +17,10 @@ Maecenas nec pulvinar nulla, nec elementum tellus. Etiam porta tincidunt tellus,
     </div>
     <div class="goal_coret goal_right">
       <h2>The Big Four</h2>
-      <div id="PO" class="{{unless goal.po "red "}}circle">{{goal-overview-builder::getUser goal.po}}</div>
-      <div id="HD" class="{{unless goal.hd "red "}}circle">{{goal-overview-builder::getUser goal.hd}}</div>
-      <div id="HFE" class="{{unless goal.hfe "red "}}circle">{{goal-overview-builder::getUser goal.hfe}}</div>
-      <div id="HBE" class="{{unless goal.hbe "red "}}circle">{{goal-overview-builder::getUser goal.hbe}}</div>
+      <div id="PO" class="{{unless goal.po "red "}}circle">{{get-user goal.po}}</div>
+      <div id="HD" class="{{unless goal.hd "red "}}circle">{{get-user goal.hd}}</div>
+      <div id="HFE" class="{{unless goal.hfe "red "}}circle">{{get-user goal.hfe}}</div>
+      <div id="HBE" class="{{unless goal.hbe "red "}}circle">{{get-user goal.hbe}}</div>
     </div>
   </div>
 </div>
