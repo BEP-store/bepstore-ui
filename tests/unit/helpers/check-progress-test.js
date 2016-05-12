@@ -6,7 +6,7 @@ import {
 } from 'mocha';
 import {
   checkProgress
-} from 'bepstore-ui/helpers/check-progress';
+} from 'bepstore/helpers/check-progress';
 
 describe('CheckProgressHelper', function() {
   // Replace this with your real tests.

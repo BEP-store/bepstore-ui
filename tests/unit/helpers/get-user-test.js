@@ -6,7 +6,7 @@ import {
 } from 'mocha';
 import {
   getUser
-} from 'bepstore-ui/helpers/get-user';
+} from 'bepstore/helpers/get-user';
 
 describe('GetUserHelper', function() {
   // Replace this with your real tests.
