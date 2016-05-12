@@ -1,7 +1,7 @@
 {
-  "name": "bepstore-ui",
-  "version": "0.0.0",
-  "description": "Small description for bepstore-ui goes here",
+  "name": "bepstore",
+  "version": "0.1.0",
+  "description": "The UI for the BEP store",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,8 @@
   },
   "repository": "",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "~5.11.1",
+    "npm": "~3.8.9"
   },
   "author": "",
   "license": "MIT",
@@ -47,7 +48,9 @@
     "ember-data": "^2.4.2",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
+    "ember-material-lite": "0.2.2",
     "ember-resolver": "^2.0.3",
+    "feedbackfruits-styles": "feedbackfruits/feedbackfruits-ui-styles",
     "loader.js": "^4.0.1"
   }
 }

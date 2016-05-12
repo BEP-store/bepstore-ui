@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'bepstore-ui',
+    modulePrefix: 'bepstore',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
