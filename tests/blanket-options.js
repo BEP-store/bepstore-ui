@@ -2,8 +2,8 @@
 /* jscs:disable */
 
 var options = {
-  modulePrefix: 'bepstore-ui',
-  filter: '//.*bepstore-ui/.*/',
+  modulePrefix: 'bepstore',
+  filter: '//.*bepstore/.*/',
   antifilter: '//.*(tests|template).*/',
   loaderExclusions: [],
   enableCoverage: true,
@@ -11,7 +11,7 @@ var options = {
     lcovOptions: {
       outputFile: 'lcov.info',
       renamer: function(moduleName) {
-        var expression = /^bepstore-ui/;
+        var expression = /^bepstore/;
         return moduleName.replace(expression, 'app') + '.js';
       }
     },
