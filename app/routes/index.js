@@ -27,6 +27,24 @@ var testGoals = [{
   hd:'',
   hfe:7,
   hbe:10
+}, {
+  id:7,
+  title:"test4",
+  description:"test4 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
+  progress:"finished",
+  po:12,
+  hd:67,
+  hfe:45,
+  hbe:10
+}, {
+  id:9,
+  title:"test8",
+  description:"test8 test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1",
+  progress:"building",
+  po:91,
+  hd:56,
+  hfe:'',
+  hbe:67
 }];
 
 export default Ember.Route.extend({

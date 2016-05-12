@@ -7,7 +7,7 @@ export function checkProgress(params) {
     case "building": return Ember.String.htmlSafe("<div class=\"blue progress\">Tackling challenges</div>");
     case "testing": return Ember.String.htmlSafe("<div class=\"red progress\">Under review</div>");
     case "finished": return Ember.String.htmlSafe("<div class=\"green progress\">Ready to use!</div>") ;
-    default: return params[0];
+    default: return Ember.String.htmlSafe("<div class=\"progress\">What?!</div>") ;
 
   }
 }
