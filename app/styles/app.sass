@@ -1,0 +1,107 @@
+// Import from feedbackfruits-styles
+@import 'feedbackfruits-components'
+@import 'feedbackfruits-platform'
+@import 'feedbackfruits-splash'
+
+$border: 2px solid black
+$size: 80%
+$spacevertical: 30px
+$spacehorizontal: 10%
+
+body
+ text-align: center
+ width: 100%
+
+.circle
+ background-color: black
+ color: white
+ border-radius: 50%
+ padding-top: 45px
+ height: 55px
+ width: 100px
+ position: absolute
+
+.progress
+ text-align: center
+ color: white
+ font-size: 16px
+ height: 20px
+ width: 175px
+ border: 1px solid black
+ float: right
+ padding: 2px
+ margin-right: 5px
+
+.red
+ background-color: red
+
+.green
+ background-color: green
+
+.blue
+ background-color: blue
+
+.pink
+ background-color: #cc5490
+
+.black
+ background-color: black
+
+.goal_container
+ display: inline-block
+ border: $border
+ width: $size
+ margin-left: (100% - $size)/2
+ margin-right: (100% - $size)/2
+ margin-bottom: 5px
+
+.goal_left
+ border-right: $border
+ width: 73%
+ height: 100%
+ float: left
+ padding-left: 1%
+
+.goal_right
+ width: 24%
+ float: left
+
+.goal_con_upper
+ width: 100%
+ height: 30px
+ padding-top: 5px
+ font-size: 20px
+ display: inline-block
+ border-bottom: $border
+ margin-bottom: -6px
+
+.goal_con_lower
+ width: 100%
+ height: 400px
+ display: inline-block
+
+.goal_title
+ font-weight: bold
+ text-align: left
+
+.goal_coret
+ position: relative
+ height: 100%
+ h2
+  margin-top: 5px
+
+#PO
+ left: $spacehorizontal
+ top: $spacevertical + 70px
+
+#HD
+ right: $spacehorizontal
+ top: $spacevertical + 70px
+
+#HFE
+ left: $spacehorizontal
+ bottom: $spacevertical
+
+#HBE
+ right: $spacehorizontal
+ bottom: $spacevertical

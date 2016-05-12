@@ -1,0 +1,26 @@
+<div class=goal_container>
+  <div class="goal_con_upper">
+    <div class="goal_title goal_left">
+      {{goal.title}}
+      {{check-progress goal.progress}}
+    </div>
+    <div class="goal_volunteers goal_right">
+      Volunteers: 42
+    </div>
+  </div>
+  <div class="goal_con_lower">
+    <div class="goal_descr goal_left">
+      <p>{{goal.description}}</p>
+<p>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ac urna nec pharetra. Nam vestibulum quis neque sed hendrerit. Praesent eget tempus metus, sit amet euismod ligula. Etiam interdum ipsum in justo vestibulum, quis mollis massa dignissim. Curabitur molestie lacus vehicula tellus scelerisque fringilla. Aliquam felis risus, vehicula non eros sit amet, elementum gravida neque. Donec porttitor accumsan volutpat. Suspendisse molestie arcu eu fringilla viverra. Phasellus dictum risus sapien, eu rhoncus enim volutpat a. Etiam ut dolor varius justo consequat venenatis sit amet tempor tellus. Quisque porta tortor id dignissim interdum. Curabitur ut suscipit purus. Quisque semper dictum aliquam. Sed placerat metus at odio egestas gravida. Etiam eu dui mattis, viverra orci nec, luctus orci. Nunc sit amet erat vel sapien interdum mattis ut in ligula.
+
+Maecenas nec pulvinar nulla, nec elementum tellus. Etiam porta tincidunt tellus, at bibendum elit tincidunt ac. Nunc placerat ipsum magna, sed bibendum justo sagittis a. Sed consectetur pharetra nisi, at mollis lectus viverra eget. Curabitur neque orci, dapibus ut dolor et, auctor vulputate sapien. Aenean elit arcu, feugiat eget fermentum ac, ultricies quis velit. Nam ornare sem sit amet arcu tincidunt varius. Etiam interdum, nulla vitae porttitor imperdiet, tortor nisl dapibus urna, quis placerat velit lorem a ex. Vestibulum hendrerit imperdiet molestie. Integer consequat ac ante et porttitor. Quisque non ornare nisi, nec dictum libero. Donec a mollis mi. Donec feugiat laoreet tempus. Praesent at ornare nulla. Ut sed nisl vitae erat viverra ornare.</p>
+    </div>
+    <div class="goal_coret goal_right">
+      <h2>The Big Four</h2>
+      <div id="PO" class="{{unless goal.po "red "}}circle">{{get-user goal.po}}</div>
+      <div id="HD" class="{{unless goal.hd "red "}}circle">{{get-user goal.hd}}</div>
+      <div id="HFE" class="{{unless goal.hfe "red "}}circle">{{get-user goal.hfe}}</div>
+      <div id="HBE" class="{{unless goal.hbe "red "}}circle">{{get-user goal.hbe}}</div>
+    </div>
+  </div>
+</div>
