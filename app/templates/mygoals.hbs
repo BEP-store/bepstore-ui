@@ -1,4 +1,8 @@
-<h2> Current Projects </h2>
+{{#fbf-text title=true}}
+  Your Goals
+{{/fbf-text}}
 {{#each model as |goaloverview|}}
-  {{goal-overview goal=goaloverview}}
+  {{#fbf-card}}
+    {{goal-overview goal=goaloverview}}
+  {{/fbf-card}}
 {{/each}}
