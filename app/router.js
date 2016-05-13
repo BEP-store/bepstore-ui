@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('index', { path: '/' }, function() {
+  this.route('index', {path:'/'}, function() {
     this.route('mygoals');
     this.route('trending');
     this.route('newgoals');
