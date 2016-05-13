@@ -8,7 +8,16 @@
     <div class="fbf-layout__content-container fbf-layout__content--over-header">
       {{#fbf-tab-bar theme="semitransparent"}}
         {{#fbf-tab-bar-item 'index.mygoals'}}
-          <i class="material-icons">account_balance</i> Your Goals
+          <i class="material-icons">account_balance</i>
+          Your Goals
+        {{/fbf-tab-bar-item}}
+        {{#fbf-tab-bar-item 'index.trending'}}
+          <i class="material-icons">account_balance</i>
+          Trending
+        {{/fbf-tab-bar-item}}
+        {{#fbf-tab-bar-item 'index.newgoals'}}
+          <i class="material-icons">account_balance</i>
+          New
         {{/fbf-tab-bar-item}}
       {{/fbf-tab-bar}}
       {{outlet}}
