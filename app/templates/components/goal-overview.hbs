@@ -17,10 +17,10 @@ Maecenas nec pulvinar nulla, nec elementum tellus. Etiam porta tincidunt tellus,
     </div>
     <div class="goal_coret goal_right">
       <h2>The Big Four</h2>
-      <div id="PO" class="{{unless goal.po "red "}}circle">{{get-user goal.po}}</div>
-      <div id="HD" class="{{unless goal.hd "red "}}circle">{{get-user goal.hd}}</div>
-      <div id="HFE" class="{{unless goal.hfe "red "}}circle">{{get-user goal.hfe}}</div>
-      <div id="HBE" class="{{unless goal.hbe "red "}}circle">{{get-user goal.hbe}}</div>
+      <div class="{{unless goal.po "red "}}circle PO">{{get-user goal.po}} <p>Product Owner</p></div>
+      <div class="{{unless goal.hd "red "}}circle HD">{{get-user goal.hd}} <p>Design</p></div>
+      <div class="{{unless goal.hfe "red "}}circle HFE">{{get-user goal.hfe}}<p>Front-End</p></div>
+      <div class="{{unless goal.hbe "red "}}circle HBE">{{get-user goal.hbe}}<p>Back-End</p></div>
     </div>
   </div>
 </div>
