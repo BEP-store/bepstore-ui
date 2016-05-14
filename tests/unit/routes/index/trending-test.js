@@ -6,8 +6,8 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:mygoals',
-  'MygoalsRoute',
+  'route:index/trending',
+  'TrendingRoute',
   {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
