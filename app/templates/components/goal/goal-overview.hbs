@@ -16,11 +16,7 @@
 Maecenas nec pulvinar nulla, nec elementum tellus. Etiam porta tincidunt tellus, at bibendum elit tincidunt ac. Nunc placerat ipsum magna, sed bibendum justo sagittis a. Sed consectetur pharetra nisi, at mollis lectus viverra eget. Curabitur neque orci, dapibus ut dolor et, auctor vulputate sapien. Aenean elit arcu, feugiat eget fermentum ac, ultricies quis velit. Nam ornare sem sit amet arcu tincidunt varius. Etiam interdum, nulla vitae porttitor imperdiet, tortor nisl dapibus urna, quis placerat velit lorem a ex. Vestibulum hendrerit imperdiet molestie. Integer consequat ac ante et porttitor. Quisque non ornare nisi, nec dictum libero. Donec a mollis mi. Donec feugiat laoreet tempus. Praesent at ornare nulla. Ut sed nisl vitae erat viverra ornare.</p>
     </div>
     <div class="goal_coret goal_right">
-      <h2>The Big Four</h2>
-      <div class="{{unless goal.po "red "}}circle PO">{{get-user goal.po}} <p>Product Owner</p></div>
-      <div class="{{unless goal.hd "red "}}circle HD">{{get-user goal.hd}} <p>Design</p></div>
-      <div class="{{unless goal.hfe "red "}}circle HFE">{{get-user goal.hfe}}<p>Front-End</p></div>
-      <div class="{{unless goal.hbe "red "}}circle HBE">{{get-user goal.hbe}}<p>Back-End</p></div>
+      {{goal/core-team team=goal}}
     </div>
   </div>
 </div>
