@@ -6,7 +6,7 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:index',
+  'route:index/index',
   'IndexRoute',
   {
     // Specify the other units that are required for this test.
