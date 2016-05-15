@@ -1,1 +1,22 @@
-{{yield}}
+{{#fbf-nav primaryButton="drawer" transparent=responsive.isLayout bigHeader=true title="SAP Store" logo=responsive.isLayout withTabs=true imageUrl="http://time4smart.com/wp-content/uploads/2015/11/epic-face-wallpapers-hd.jpg" as |section|}}
+  {{#if section.isContent}}
+    <div class="fbf-layout__horizontal-center-flex">
+      <div class="fbf-layout__content-container fbf-layout__content-container--spacing">
+        {{yield}}
+      </div>
+    </div>
+  {{else if section.isDrawer}}
+    {{application/header-drawer}}
+  {{else if section.isHeader}}
+    {{application/navigation-header}}
+  {{else if section.isTabs}}
+    <div class="fbf-tab-bar fbf-tab-bar--style-header">
+      {{#fbf-tab-bar-item 'goal.descr'}}
+        Description
+      {{/fbf-tab-bar-item}}
+      {{#fbf-tab-bar-item 'goal.core'}}
+        Big Four
+      {{/fbf-tab-bar-item}}
+    </div>
+  {{/if}}
+{{/fbf-nav}}
