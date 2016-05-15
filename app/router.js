@@ -6,6 +6,20 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('register');
+
+  this.route('login', function() {
+    this.route('identity-provider');
+    this.route('email');
+  });
+
+  this.route('auth', function() {
+    this.route('external', { path: '/:identity_provider_id' });
+    this.route('callback');
+  });
+
+  this.route('logout');
+
   this.route('index', {path:'/'}, function() {
     this.route('mygoals');
     this.route('trending');
