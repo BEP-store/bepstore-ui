@@ -4,5 +4,5 @@ export default function statuses(){
         'building':  'Tackling challenges',
         'testing': 'Under review',
         'finished': 'Ready to use!'
-      }
+      };
 }
