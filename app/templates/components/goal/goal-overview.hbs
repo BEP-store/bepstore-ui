@@ -2,7 +2,7 @@
   <div class="goal_con_upper">
     <div class="goal_title goal_left">
       {{goal.title}}
-      {{check-progress goal.progress}}
+      {{badge/status-badge status=goal.progress size="18" float="right"}}
     </div>
     <div class="goal_volunteers goal_right">
       Volunteers: 42
