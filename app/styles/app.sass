@@ -8,11 +8,11 @@ $size: 99%
 $spacevertical: 30px
 $spacehorizontal: 5%
 
-/**.mdl-layout__header
- background-color: #3832E6
+//.mdl-layout__header
+ background-color: #FA9150
 
-/**.mdl-layout--logo
- color: #FA9150
+//.mdl-layout--logo
+ color: #3832E6
 
 .circle
  background-color: black
@@ -23,31 +23,38 @@ $spacehorizontal: 5%
  width: 100px
  position: absolute
 
-.progress
+.status_badge
  text-align: center
  color: white
- font-size: 10px
- height: 17px
- width: 100px
  border: 1px solid black
- float: right
- padding: 3px
  margin-right: 5px
 
-.red
- background-color: red
+.big_badge
+ font-size: 21px
+ width: 210px
+ padding: 4.5px
 
-.green
- background-color: green
+.small_badge
+ font-size: 16px
+ width: 160px
+ padding: 2px
+ float: right
+ margin-top: -20px
 
-.blue
- background-color: blue
-
-.pink
+.status_init
  background-color: #cc5490
 
-.black
+.status_spec-design
  background-color: black
+
+.status_building
+ background-color: blue
+
+.status_testing
+ background-color: red
+
+.status_finished
+ background-color: green
 
 .goal_container
  text-align: center
