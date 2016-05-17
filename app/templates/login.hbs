@@ -1,0 +1,18 @@
+<div class="fbf-center-container">
+  {{#fbf-text center=true light=true}}
+		Log in with your GitHub account.
+	{{/fbf-text}}
+</div>
+<div class="fbf-login-card-grid">
+  {{#each model as |idp i|}}
+    {{component 'feedbackfruits-accounts@login-identity-provider-card' model=idp}}
+  {{/each}}
+</div>
+<div class="fbf-center-container">
+  {{#fbf-text center=true light=true}}
+		Or log in with you FeedbackFruits account:
+	{{/fbf-text}}
+</div>
+<div class="fbf-btn--center-container">
+  {{component 'feedbackfruits-accounts@login-email-card'}}
+</div>

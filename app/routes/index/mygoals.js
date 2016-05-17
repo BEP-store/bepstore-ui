@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'feedbackfruits-accounts/mixins/authenticated-route-mixin';
 
 var testGoals = [{
   id:1,
@@ -47,7 +48,7 @@ var testGoals = [{
   hbe:67
 }];
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model(){
     return testGoals;
   }
