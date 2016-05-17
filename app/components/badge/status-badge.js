@@ -9,6 +9,6 @@ export default Ember.Component.extend({
   }),
 
   _statusText: Ember.computed('status', function() {
-    return statuses().converte(this.get('status'));
+    return statuses()[this.get('status')];
   })
 });
