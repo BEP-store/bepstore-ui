@@ -12,6 +12,11 @@
   <div class="goal_con_lower">
     <div class="goal_descr goal_left">
       <p>{{goal.description}}</p>
+      <a href="goal/{{goal.id}}/descr">
+        {{#fbf-btn}}
+          Go to Goal
+        {{/fbf-btn}}
+      </a>
     </div>
     <div class="goal_coret goal_right">
       {{goal/core-team team=goal}}
