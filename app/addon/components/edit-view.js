@@ -2,5 +2,5 @@ import ActivitiesBaseEditView from 'feedbackfruits/components/activities/base/ed
 import layout from '../templates/components/edit-view';
 
 export default ActivitiesBaseEditView.extend({
-  layout,
+  layout
 });

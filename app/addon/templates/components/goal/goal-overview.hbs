@@ -1,0 +1,19 @@
+<div class=goal_container>
+  <div class="goal_con_upper">
+    <div class="goal_title goal_left">
+      {{goal.title}}
+      {{badge/status-badge status=goal.progress size="small"}}
+    </div>
+    <div class="goal_volunteers goal_right">
+      Volunteers: 42
+    </div>
+  </div>
+  <div class="goal_con_lower">
+    <div class="goal_descr goal_left">
+      <p>{{goal.description}}</p>
+    </div>
+    <div class="goal_coret goal_right">
+      {{goal/core-team team=goal}}
+    </div>
+  </div>
+</div>
