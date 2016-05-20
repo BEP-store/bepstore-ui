@@ -4,6 +4,6 @@ import mockMaker from '../../utils/mockMaker';
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model(){
-    return mockMaker().multipleGoals();
+    return this.get('store').findAll('activity');
   }
 });

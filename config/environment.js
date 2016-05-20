@@ -2,8 +2,8 @@
 
 var defaults = {
   API_HOST: 'http://localhost.feedbackfruits.com:3000',
-  ACCOUNTS_HOST: 'http://localhost.feedbackfruits.com:3001',
-  ADMIN_HOST: 'http://localhost.feedbackfruits.com:3000/admin',
+  ACCOUNTS_HOST: 'http://staging-accounts.feedbackfruits.com',
+  ADMIN_HOST: 'http://staging-bepstore-admin.feedbackfruits.com',
   APPSIGNAL_ENABLED: false,
 
   production: {

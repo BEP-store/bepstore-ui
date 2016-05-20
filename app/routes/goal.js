@@ -1,8 +1,8 @@
 import Ember from 'ember';
-import mockMaker from '../utils/mockMaker';
+// import mockMaker from '../utils/mockMaker';
 
 export default Ember.Route.extend({
   model(params) {
-    return mockMaker().oneGoal(params.goal_id);
+    return this.get('store').findRecord('activity', params.goal_id);
   }
 });
