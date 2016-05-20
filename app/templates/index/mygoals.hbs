@@ -2,7 +2,5 @@
   Your Goals
 {{/fbf-text}}
 {{#each model as |goaloverview|}}
-  {{#fbf-card}}
-    {{goal/goal-overview goal=goaloverview}}
-  {{/fbf-card}}
+  {{component 'bepstore-goals@list-item' goal=goaloverview}}
 {{/each}}
