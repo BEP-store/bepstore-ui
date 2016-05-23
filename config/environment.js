@@ -18,6 +18,13 @@ var defaults = {
     ACCOUNTS_HOST: 'https://staging-accounts.feedbackfruits.com',
     ADMIN_HOST: 'https://staging-bepstore-admin.feedbackfruits.com',
     APPSIGNAL_ENABLED: true
+  },
+
+  mock: {
+    API_HOST: 'http://localhost.feedbackfruits.com:3000',
+    ACCOUNTS_HOST: 'http://staging-accounts.feedbackfruits.com',
+    ADMIN_HOST: 'http://staging-bepstore-admin.feedbackfruits.com',
+    APPSIGNAL_ENABLED: false,
   }
 };
 
