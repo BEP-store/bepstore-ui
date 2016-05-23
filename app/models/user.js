@@ -1,6 +1,6 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
-import {belongsTo, hasMany} from 'ember-data/relationships';
+import {belongsTo} from 'ember-data/relationships'; //, hasMany
 import Ember from 'ember';
 
 const { computed: { filterBy } } = Ember;
@@ -22,7 +22,7 @@ export default Model.extend({
 
   name: attr('string'),
 
-  goals: hasMany('goal', { inverse: 'contributers' }),
+  //goals: hasMany('goal', { inverse: 'contributers' }),
 
   pending_goals: Ember.merge( filterBy('goal', 'status', 'init'), filterBy('goal', 'status', 'spec-design') ),
 
