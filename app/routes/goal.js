@@ -1,5 +1,4 @@
 import Ember from 'ember';
-// import mockMaker from '../utils/mockMaker';
 
 export default Ember.Route.extend({
   model(params) {

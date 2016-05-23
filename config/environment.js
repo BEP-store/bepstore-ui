@@ -2,8 +2,8 @@
 
 var defaults = {
   API_HOST: 'http://localhost.feedbackfruits.com:3000',
-  ACCOUNTS_HOST: 'http://staging-accounts.feedbackfruits.com',
-  ADMIN_HOST: 'http://staging-bepstore-admin.feedbackfruits.com',
+  ACCOUNTS_HOST: 'http://localhost.feedbackfruits.com:3001',
+  ADMIN_HOST: 'http://localhost.feedbackfruits.com:3000/admin',
   APPSIGNAL_ENABLED: false,
 
   production: {
@@ -18,6 +18,13 @@ var defaults = {
     ACCOUNTS_HOST: 'https://staging-accounts.feedbackfruits.com',
     ADMIN_HOST: 'https://staging-bepstore-admin.feedbackfruits.com',
     APPSIGNAL_ENABLED: true
+  },
+
+  mock: {
+    API_HOST: 'http://localhost.feedbackfruits.com:3000',
+    ACCOUNTS_HOST: 'http://staging-accounts.feedbackfruits.com',
+    ADMIN_HOST: 'http://staging-bepstore-admin.feedbackfruits.com',
+    APPSIGNAL_ENABLED: false,
   }
 };
 
