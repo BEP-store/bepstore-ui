@@ -21,8 +21,7 @@
     "sanitize.js": "~1.0.0",
     "jquery-ui": "^1.11.4",
     "mdi": "^1.5.54",
-    "jqueryui-touch-punch": "*",
-    "ember-cli-moment-shim": "^1.1.0"
+    "jqueryui-touch-punch": "*"
   },
   "resolutions": {
     "material-design-lite": "~1.1.3"
