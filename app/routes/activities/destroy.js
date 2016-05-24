@@ -9,9 +9,8 @@ export default Route.extend({
   },
   renderTemplate() {
     this.render('activities.destroy', {
-      // controller: `${this.get('session.baseRoute')}.activities.new`,
       into: 'application',
-      // outlet: 'modal'
+      outlet: 'modal'
     });
   }
 });
