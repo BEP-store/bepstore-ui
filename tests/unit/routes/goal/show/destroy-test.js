@@ -6,8 +6,8 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:goal/descr',
-  'GoalDescrRoute',
+  'route:goal/show/destroy',
+  'GoalShowDestroyRoute',
   {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
