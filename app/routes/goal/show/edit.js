@@ -4,11 +4,13 @@ const { Route, inject: { service } } = Ember;
 
 export default Route.extend({
   session: service(),
-  model(params){
-    return this.get('store').findRecord('goal', params.activity_id);
+
+  afterModel: function() {
+    this.set('model', this.modelFor('goal'));
   },
+
   renderTemplate() {
-    this.render('activities.edit', {
+    this.render('goal.edit', {
       into: 'application',
       outlet: 'modal'
     });
