@@ -8,6 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('activities', function() {
     this.route('new');
+    this.route('edit', { path: '/:activity_id/edit' });
+    this.route('destroy', { path: '/:activity_id/destroy' });
+    this.route('show', { path: '/:activity_id' });
   });
 
   this.route('register');
