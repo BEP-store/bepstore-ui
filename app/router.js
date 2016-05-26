@@ -6,12 +6,17 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('activities', function() {
+  let goal = function() {
     this.route('new');
-    this.route('edit', { path: '/:activity_id/edit' });
-    this.route('destroy', { path: '/:activity_id/destroy' });
-    this.route('show', { path: '/:activity_id' });
-  });
+    this.route('edit', { path: '/:goal_id/edit'});
+    this.route('destroy', { path: '/:goal_id/destroy' });
+    this.route('show', { path: '/:goal_id' }, function() {
+      this.route('new');
+      this.route('edit');
+      this.route('destroy');
+      this.route('show');
+    });
+  };
 
   this.route('register');
 
@@ -28,15 +33,18 @@ Router.map(function() {
   this.route('logout');
 
   this.route('index', {path:'/'}, function() {
-    this.route('mygoals');
-    this.route('trending');
-    this.route('newgoals');
+    this.route('mygoals', function() {
+      this.route('goal', goal);
+    });
+    this.route('trending', function() {
+      this.route('goal', goal);
+    });
+    this.route('newgoals', function() {
+      this.route('goal', goal);
+    });
+    this.route('goal',goal);
   });
 
-  this.route('goal', {path:'/goal/:goal_id'}, function() {
-    this.route('descr');
-    this.route('core');
-  });
 });
 
 export default Router;

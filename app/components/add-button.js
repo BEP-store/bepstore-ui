@@ -13,13 +13,12 @@ export default Component.extend(ClickOutside, {
   router: service(),
 
   activitiesNewRoute: computed('session.baseRoute', function() {
-    return `activities.new`;
+    return `index.mygoals.goal.new`;
   }),
 
   actions: {
     clickButton() {
       this.get('router').transitionTo(this.get('activitiesNewRoute'));
-      // this.set('_isBottomSheetShown', !this.get('_isBottomSheetShown'));
     }
   },
 
