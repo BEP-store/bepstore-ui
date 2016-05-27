@@ -1,6 +1,9 @@
 # Bepstore-ui
-[![Stories in Ready](https://badge.waffle.io/feedbackfruits/bepstore-ui.png?label=ready&title=Ready)](https://waffle.io/feedbackfruits/bepstore-ui)
 [![Circle CI](https://circleci.com/gh/feedbackfruits/bepstore-ui.svg?style=shield)](https://circleci.com/gh/feedbackfruits/bepstore-ui)
+[![codecov](https://codecov.io/gh/feedbackfruits/bepstore-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/feedbackfruits/bepstore-ui)
+[![Code Climate](https://codeclimate.com/github/feedbackfruits/bepstore-ui/badges/gpa.svg)](https://codeclimate.com/github/feedbackfruits/bepstore-ui)
+
+[![Stories in Ready](https://badge.waffle.io/feedbackfruits/bepstore-ui.png?label=ready&title=Ready)](https://waffle.io/feedbackfruits/bepstore-ui)
 [![Dependency Status](https://david-dm.org/feedbackfruits/bepstore-ui.svg)](https://david-dm.org/feedbackfruits/bepstore-ui)
 [![devDependency Status](https://david-dm.org/feedbackfruits/bepstore-ui/dev-status.svg)](https://david-dm.org/feedbackfruits/bepstore-ui#info=devDependencies)
 
