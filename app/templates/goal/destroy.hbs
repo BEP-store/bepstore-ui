@@ -1,1 +1,2 @@
-{{component 'bepstore-goals@destroy-view' model=model}}
+{{!-- {{component 'bepstore-goals@destroy-view' model=model}} --}}
+{{component (component-for-engine model.engine 'destroy-view') model=model isInsidebar=false}}

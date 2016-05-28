@@ -1,1 +1,2 @@
-{{component 'bepstore-goals@detail-view' model=model isInSidebar=false}}
+{{!-- {{component 'bepstore-goals@detail-view' model=model isInSidebar=false}} --}}
+{{component (component-for-engine model.engine 'detail-view') model=model isInsidebar=false}}

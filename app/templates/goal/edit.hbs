@@ -1,1 +1,2 @@
-{{component 'bepstore-goals@edit-view' model=model}}
+{{!-- {{component 'bepstore-goals@edit-view' model=model}} --}}
+{{component (component-for-engine model.engine 'edit-view') model=model isInsidebar=false}}

@@ -1,1 +1,2 @@
-{{component 'bepstore-goals@new-view' type='goal'}}
+{{!-- {{component 'bepstore-goals@new-view' type='goal'}} --}}
+{{component (component-for-engine model.engine 'new-view') model=model isInsidebar=false}}

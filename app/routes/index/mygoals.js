@@ -3,6 +3,6 @@ import AuthenticatedRouteMixin from 'feedbackfruits-accounts/mixins/authenticate
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model(){
-    return this.get('store').findAll('goal');
+    return this.get('store').findAll('github-goal');
   }
 });
