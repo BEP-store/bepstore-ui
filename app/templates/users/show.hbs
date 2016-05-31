@@ -1,0 +1,27 @@
+{{#fbf-nav type="default" title="SAPP Store" logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+    <div class="fbf-layout__content-header">
+      {{fbf-image src="http://static.vecteezy.com/system/resources/previews/000/095/260/original/vector-floral-green-colorful-background.jpg"}}
+    </div>
+    <div class="fbf-layout__horizontal-center-flex">
+      <div class="fbf-layout__content-container fbf-layout__content--over-header">
+        {{fbf-image src="http://dopeypictures.weebly.com/uploads/1/5/5/7/15572150/9907071_orig.jpg" class="big_picture"}}
+        <h1 style="margin-left:100px">Cees Herpdiederpston</h1>
+        {{#fbf-card}}
+          {{#fbf-item}}
+            Cees Herpdiederpston is geverifieerd klootviool die blijkbaar kan programmeren. Als broodwinning staat hij voor de klas aardrijkskunde te geven, waar hij niet goed in is. Met zijn schele hoofd wijst hij namelijk altijd het verkeerde aan en in zijn dronken buien haalt hij links en rechts af en toe door elkaar.<br /> <br/>
+            Hij wordt echter wel gewaardeerd door zijn leerlingen. Of dit komt doordat hij te verstrooid is om huiswerk te geven, of doordat hij proefwerken kwijtraakt en dan maar hoge cijfers ter compensatie moet geven, dat weet niemand.
+          {{/fbf-item}}
+        {{/fbf-card}}
+        <h2>Contact</h2>
+        {{#fbf-card}}
+          {{#fbf-item}}
+          <strong>E-mail:</strong> niethopen@feedbackfruits.com
+          {{/fbf-item}}
+        {{/fbf-card}}
+      </div>
+    </div>
+  {{else if section.isDrawer}}
+    {{nav/nav-bar}}
+  {{/if}}
+{{/fbf-nav}}

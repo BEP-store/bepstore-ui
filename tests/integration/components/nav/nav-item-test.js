@@ -23,7 +23,7 @@ describeComponent(
       //   {{/nav/nav-item}}
       // `);
 
-      this.render(hbs`{{nav/nav-item}}`);
+      this.render(hbs`{{nav/nav-item 'index'}}`);
       expect(this.$()).to.have.length(1);
     });
   }
