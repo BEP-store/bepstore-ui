@@ -5,12 +5,15 @@
     </div>
     <div class="fbf-layout__horizontal-center-flex">
       <div class="fbf-layout__content-container fbf-layout__content--over-header">
-        {{fbf-image src="http://dopeypictures.weebly.com/uploads/1/5/5/7/15572150/9907071_orig.jpg" class="big_picture"}}
-        <h1 style="margin-left:100px">Cees Herpdiederpston</h1>
+        {{#if model.pic}}
+          {{fbf-image src=model.pic class="big_picture"}}
+        {{else}}
+          <div class="big_picture name_pic"><br />{{model.name}}</div>
+        {{/if}}
+        <h1 style="margin-left:100px">{{model.name}}</h1>
         {{#fbf-card}}
           {{#fbf-item}}
-            Cees Herpdiederpston is geverifieerd klootviool die blijkbaar kan programmeren. Als broodwinning staat hij voor de klas aardrijkskunde te geven, waar hij niet goed in is. Met zijn schele hoofd wijst hij namelijk altijd het verkeerde aan en in zijn dronken buien haalt hij links en rechts af en toe door elkaar.<br /> <br/>
-            Hij wordt echter wel gewaardeerd door zijn leerlingen. Of dit komt doordat hij te verstrooid is om huiswerk te geven, of doordat hij proefwerken kwijtraakt en dan maar hoge cijfers ter compensatie moet geven, dat weet niemand.
+            {{model.bio}}
           {{/fbf-item}}
         {{/fbf-card}}
         <h2>Contact</h2>
