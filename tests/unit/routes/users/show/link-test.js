@@ -6,8 +6,8 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:users/me/edit',
-  'UserEditRoute',
+  'route:users/show/link',
+  'UserLinkRoute',
   {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']

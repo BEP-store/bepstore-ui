@@ -46,8 +46,7 @@ Router.map(function() {
   });
 
   this.route('users', function() {
-    this.route('show', { path: '/:user_id'});
-    this.route('me', function() {
+    this.route('show', { path: '/:user_id'}, function() {
       this.route('edit');
       this.route('link');
     });
