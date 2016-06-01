@@ -8,7 +8,7 @@
         {{#if model.pic}}
           {{fbf-image src=model.pic class="big_picture"}}
         {{else}}
-          <div class="big_picture name_pic"><br />{{model.name}}</div>
+          <div class="big_picture name_pic"><br />{{firstName model.name}}</div>
         {{/if}}
         <h1 style="margin-left:100px">{{model.name}}</h1>
         {{#fbf-card}}

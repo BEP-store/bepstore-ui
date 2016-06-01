@@ -7,10 +7,18 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   session: service(),
 
   setSelf: observer('session.user', function() {
+    this.render();
     this.render('users.show', {
       into: 'application',
       model: this.get('session.user')
     });
   }),
 
+  renderTemplate() {
+    this.render();
+    this.render('users.show', {
+      into: 'application',
+      model: this.get('session.user')
+    });
+  }
 });
