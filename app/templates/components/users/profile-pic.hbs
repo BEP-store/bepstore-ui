@@ -1,0 +1,8 @@
+{{#if model.pic}}
+  {{fbf-image src=model.pic circle=true}}
+{{else}}
+  {{#fbf-text-icon style="" class="small_picture"}}
+    {{firstLetters model.name}}
+  {{/fbf-text-icon}}
+{{/if}}
+<span class="nav_pic_name"> {{model.name}} </span>

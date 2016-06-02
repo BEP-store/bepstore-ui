@@ -1,0 +1,30 @@
+{{#fbf-modal}}
+  <div class="fbf-modal__header--style-dark">
+      {{#fbf-item}}
+        <div class="fbf-item__primary-icon" {{action 'dismiss'}}>
+          {{#fbf-icon}}close{{/fbf-icon}}
+        </div>
+        <div class="fbf-item__content">
+          {{#fbf-text title=true light=true}}
+            Edit your profile
+          {{/fbf-text}}
+        </div>
+      {{/fbf-item}}
+  </div>
+  <div class="fbf-modal__content">
+    {{#fbf-text}}
+      Update your profile, tell something about yourself or add/edit a profile picture!
+      {{user.name}}
+    {{/fbf-text}}
+    {{fbf-textfield fullwidth=true label="My name:" value=model.name }}
+    {{fbf-textarea fullwidth=true label='About myself:' rows=8 value=model.bio }}
+  </div>
+  <div class="fbf-modal__footer">
+    {{#fbf-btn isColored=true disabled=model.isSaving action='dismiss'}}
+      Discard
+    {{/fbf-btn}}
+    {{#fbf-btn isColored=true disabled=saveDisabled action='save'}}
+      Publish
+    {{/fbf-btn}}
+  </div>
+{{/fbf-modal}}

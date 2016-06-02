@@ -45,6 +45,12 @@ Router.map(function() {
     this.route('goal',goal);
   });
 
+  this.route('users', function() {
+    this.route('show', { path: '/:user_id'}, function() {
+      this.route('edit');
+      this.route('link');
+    });
+  });
 });
 
 export default Router;

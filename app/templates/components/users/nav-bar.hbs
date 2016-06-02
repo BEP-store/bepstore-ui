@@ -1,0 +1,12 @@
+{{#fbf-nav type="default" title="SAPP Store" logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+    {{yield}}
+  {{else if section.isDrawer}}
+    {{nav/nav-bar}}
+  {{/if}}
+{{/fbf-nav}}
+{{#if isCurrentUser}}
+  {{#link-to 'users.show.edit'}}
+    {{users/edit-button}}
+  {{/link-to}}
+{{/if}}
