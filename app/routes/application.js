@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ApplicationRouteMixin from 'feedbackfruits-accounts/mixins/application-route-mixin';
+import ApplicationRouteMixin from 'feedbackfruits-accounts/mixins/routes/application-route-mixin';
 
 const { Route, inject: { service } } = Ember;
 
