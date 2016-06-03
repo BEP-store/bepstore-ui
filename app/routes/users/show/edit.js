@@ -3,6 +3,10 @@ import AuthenticatedRouteMixin from 'feedbackfruits-accounts/mixins/routes/authe
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
+  afterModel: function() {
+    this.set('model', this.modelFor('users.show'));
+  },
+
   renderTemplate() {
     this.render('users.show.edit', {
       into: 'application',
@@ -16,7 +20,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     },
 
     save: function(){
-      alert(this.get('model.name'));
+      this.get('model').save().then(() => {
+        history.back();
+      });
     }
   }
 });
