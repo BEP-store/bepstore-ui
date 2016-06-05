@@ -18,4 +18,6 @@ export default Model.extend({
   account: belongsTo('account'),
 
   name: attr('string'),
+
+  bio: attr('string')
 });
