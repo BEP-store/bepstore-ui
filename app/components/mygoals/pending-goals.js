@@ -4,10 +4,10 @@ const { computed } = Ember;
 
 export default Ember.Component.extend({
   pending: computed('model', function() {
-    let goals = this.get('model');
+    let goals = this.get('model') || [];
     return goals.filter((goal) => {
       let status = goal.get('status');
-      return status === 'init' || status === 'spec-design'
+      return status === 'init' || status === 'spec-design';
     });
   })
 });
