@@ -1,0 +1,6 @@
+{{#if pending}}
+  <h3>Goals you want to contributed to</h3>
+  {{#each pending as |goal|}}
+    {{component 'bepstore-goals@list-item' model=goal route="index.mygoals"}}
+  {{/each}}
+{{/if}}
