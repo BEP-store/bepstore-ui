@@ -1,6 +1,5 @@
-{{#fbf-text title=true}}
-  Your Goals
-{{/fbf-text}}
-{{#each model as |goal|}}
-  {{component 'bepstore-goals@list-item' model=goal route="index.mygoals"}}
-{{/each}}
+{{mygoals/selection-goals model=model type="working"}}
+
+{{mygoals/selection-goals model=model type="pending"}}
+
+{{mygoals/selection-goals model=model type="done"}}
