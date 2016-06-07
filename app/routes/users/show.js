@@ -3,9 +3,10 @@ import ceesHerpdiederpston from 'bepstore/utils/ceesHerpdiederpston';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.get('store').findRecord('user', params.user_id).catch(err => {
-      console.error(err);
+    if(params.user_id === 'current' || this.get('store').peekRecord('user', params.user_id)){
+      return this.get('store').findRecord('user', params.user_id);
+    } else {
       return ceesHerpdiederpston().create();
-    });
+    }
   }
 });
