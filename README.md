@@ -1,4 +1,6 @@
 # Bepstore-ui
+
+[![Join the chat at https://gitter.im/feedbackfruits/bepstore-ui](https://badges.gitter.im/feedbackfruits/bepstore-ui.svg)](https://gitter.im/feedbackfruits/bepstore-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Circle CI](https://circleci.com/gh/feedbackfruits/bepstore-ui.svg?style=shield)](https://circleci.com/gh/feedbackfruits/bepstore-ui)
 [![codecov](https://codecov.io/gh/feedbackfruits/bepstore-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/feedbackfruits/bepstore-ui)
 [![Code Climate](https://codeclimate.com/github/feedbackfruits/bepstore-ui/badges/gpa.svg)](https://codeclimate.com/github/feedbackfruits/bepstore-ui)
