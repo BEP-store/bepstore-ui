@@ -1,6 +1,6 @@
-{{#if done}}
-  <h3>Finished Goals you contributed to</h3>
-  {{#each done as |goal|}}
+{{#if selection}}
+  <h3>{{title}}</h3>
+  {{#each selection as |goal|}}
     {{component 'bepstore-goals@list-item' model=goal route="index.mygoals"}}
   {{/each}}
 {{/if}}

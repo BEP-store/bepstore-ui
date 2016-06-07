@@ -8,9 +8,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     return this.get('store').findRecord('user','current')
       .then(I => {
         let mapFn = (goal) => {
-          return goal.get('contributors').then(contributors => {
-            return [goal, contributors.isAny('id', I.get('id'))];
-          });
+          return [goal, goal.get('contributors').isAny('id', I.get('id'))];
         };
         return this.get('store').findAll('goal').then((goals) => {
           return Promise.all(goals.map(mapFn));

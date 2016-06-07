@@ -7,8 +7,8 @@ import {
 import hbs from 'htmlbars-inline-precompile';
 
 describeComponent(
-  'mygoals/pending-goals',
-  'Integration: MygoalsPendingGoalsComponent',
+  'mygoals/selection-goals',
+  'Integration: MygoalsSelectionGoalsComponent',
   {
     integration: true
   },
@@ -18,12 +18,12 @@ describeComponent(
       // Handle any actions with this.on('myAction', function(val) { ... });
       // Template block usage:
       // this.render(hbs`
-      //   {{#mygoals/pending-goals}}
+      //   {{#mygoals/selection-goals}}
       //     template content
-      //   {{/mygoals/pending-goals}}
+      //   {{/mygoals/selection-goals}}
       // `);
 
-      this.render(hbs`{{mygoals/pending-goals}}`);
+      this.render(hbs`{{mygoals/selection-goals}}`);
       expect(this.$()).to.have.length(1);
     });
   }
