@@ -31,6 +31,37 @@
 
 .chat-conversation
   height: 260px
+  width: 100%
+  overflow-y: auto
+
+.chat-message
+  width: 100%
+  display: inline-block
+  .bubble
+    margin: 5px
+    padding: 5px
+    border: 1pt solid grey
+    border-radius: 5px
+    float: left
+    width: 72%
+    -webkit-box-shadow: 0px 5px 83px -13px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 5px 83px -13px rgba(0,0,0,0.75)
+    box-shadow: 0px 5px 83px -13px rgba(0,0,0,0.75)
+    .line
+     margin-top: 2px
+     border-bottom: 1pt solid gainsboro
+     height: 22px
+    :last-child
+     border-bottom: none
+
+.chat-user-pic
+ background-color: grey
+ border: 1px solid black
+ color: white
+ margin: 2px
+ border-radius: 50%
+ height: 50px
+ width: 50px
 
 .chat-text-field
   margin-left: 5px

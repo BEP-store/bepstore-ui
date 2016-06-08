@@ -1,0 +1,8 @@
+{{users/chat-pic userid=message.userid}}
+<div class="bubble">
+{{#each message.body as |message|}}
+  <div class="line">
+    {{message.content}}
+  </div>
+{{/each}}
+</div>

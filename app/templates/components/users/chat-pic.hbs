@@ -1,0 +1,7 @@
+{{#if user.pic}}
+  {{fbf-image src=user.pic circle=true}}
+{{else}}
+  {{#fbf-text-icon style=float class="chat-user-pic"}}
+    {{firstLetters user.name}}
+  {{/fbf-text-icon}}
+{{/if}}

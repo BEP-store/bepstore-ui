@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   actions: {
     send: function(){
       this.get('sendMessage')(this.get('chat.message'));
+      this.set('chat.message',"");
     }
   }
 });

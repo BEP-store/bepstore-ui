@@ -17,6 +17,9 @@
     <div class="chat-window-content">
       {{#if contentChat}}
         <div class="chat-conversation">
+          {{#each messages as |message index|}}
+            {{chat/chat-message message=message}}
+          {{/each}}
         </div>
         {{chat/chat-textfield sendMessage=(action 'sendMessage')}}
       {{else}}
