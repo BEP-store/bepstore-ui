@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   classNames: 'chat-window',
   openChat: false,
   windowSize: 'chat-closed',
+  contentChat: true,
 
   actions: {
     toggle: function() {
@@ -13,6 +14,10 @@ export default Ember.Component.extend({
       } else {
         this.set('windowSize', 'chat-closed');
       }
+    },
+    sendMessage: function(message) {
+      alert(message);
     }
+
   }
 });
