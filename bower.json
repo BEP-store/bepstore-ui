@@ -21,7 +21,8 @@
     "sanitize.js": "~1.0.0",
     "jquery-ui": "^1.11.4",
     "mdi": "^1.5.54",
-    "jqueryui-touch-punch": "*"
+    "jqueryui-touch-punch": "*",
+    "uri.js": "^1.18.1"
   },
   "resolutions": {
     "material-design-lite": "~1.1.3"

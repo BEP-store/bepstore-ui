@@ -5,6 +5,7 @@ const { Route, inject: { service } } = Ember;
 
 export default Route.extend(ApplicationRouteMixin, {
   session: service(),
+  socket: service(),
 
   title(tokens) {
     tokens = Ember.makeArray(tokens);
@@ -14,5 +15,15 @@ export default Route.extend(ApplicationRouteMixin, {
     //   title = `(${this.get('session.user.unread_notifications.length')}) ${title}`;
     // }
     return title;
+  },
+
+  activate() {
+    this._super(...arguments);
+    this.set('_socketSubscription', this.get('socket').subscribe('GoalChannel', this.get('socket').createResourceSubscriber()));
+  },
+
+  deactivate() {
+    this._super(...arguments);
+    this.get('_socketSubscription').unsubscribe();
   }
 });
