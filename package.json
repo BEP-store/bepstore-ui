@@ -23,8 +23,10 @@
   "license": "MIT",
   "devDependencies": {
     "active-model-adapter": "2.1.1",
+    "bepstore-chat": "feedbackfruits/bepstore-ui-chat",
     "bepstore-github": "feedbackfruits/bepstore-ui-github",
     "bepstore-goals": "feedbackfruits/bepstore-ui-goals",
+    "bepstore-user": "feedbackfruits/bepstore-ui-user",
     "broccoli-asset-rev": "^2.4.2",
     "codecov": "^1.0.1",
     "ember-ajax": "0.7.1",

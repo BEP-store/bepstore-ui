@@ -1,26 +1,8 @@
-{{#users/nav-bar model=model}}
-<div class="fbf-layout__content-header">
-  {{fbf-image src="http://static.vecteezy.com/system/resources/previews/000/095/260/original/vector-floral-green-colorful-background.jpg"}}
-</div>
-<div class="fbf-layout__horizontal-center-flex">
-  <div class="fbf-layout__content-container fbf-layout__content--over-header">
-    {{#if model.pic}}
-      {{fbf-image src=model.pic class="big_picture"}}
-    {{else}}
-      <div class="big_picture name_pic"><br />{{firstName model.name}}</div>
-    {{/if}}
-    <h1 style="margin-left:100px">{{model.name}}</h1>
-    {{#fbf-card}}
-      {{#fbf-item}}
-        {{model.bio}}
-      {{/fbf-item}}
-    {{/fbf-card}}
-    <h2>Contact</h2>
-    {{#fbf-card}}
-      {{#fbf-item}}
-      <strong>E-mail:</strong> niethopen@feedbackfruits.com
-      {{/fbf-item}}
-    {{/fbf-card}}
-  </div>
-</div>
-{{/users/nav-bar}}
+{{#fbf-nav type="default" title="SAPP Store" logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+    {{component 'bepstore-user@profile/show' model=model}}
+  {{else if section.isDrawer}}
+    {{nav/nav-bar}}
+  {{/if}}
+{{/fbf-nav}}
+{{component 'bepstore-user@profile/edit-button' model=model}}
