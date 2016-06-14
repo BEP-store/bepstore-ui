@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import goalFun from 'bepstore/utils/goalFun';
 
 const { Route, inject: { service } } = Ember;
 
@@ -10,9 +11,6 @@ export default Route.extend({
   },
 
   renderTemplate() {
-    this.render('goal.destroy', {
-      into: 'application',
-      outlet: 'modal'
-    });
+    goalFun.render(this,'goal.destroy', true);
   }
 });

@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import goalFun from 'bepstore/utils/goalFun';
 
 const { Route, inject: { service } } = Ember;
 
@@ -8,8 +9,6 @@ export default Route.extend({
     return this.get('store').findRecord('goal', params.goal_id);
   },
   renderTemplate() {
-    this.render('goal.show', {
-      into: 'application'
-    });
+    goalFun.render(this,'goal.show', false);
   }
 });
