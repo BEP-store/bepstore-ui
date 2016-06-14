@@ -10,6 +10,8 @@
     {{content-for "head"}}
     {{content-for "test-head"}}
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/bepstore.css">
     <link rel="stylesheet" href="assets/test-support.css">
@@ -22,6 +24,17 @@
     {{content-for "body"}}
     {{content-for "test-body"}}
 
+    <script type="text/javascript">
+      // mdl-selectfield executes before componentHandler is defined by MDL.
+      // Here we mock componentHandler.register() so the app doesn't crash.
+      ;(function () {
+        window.componentHandler = {
+          register: function (config) {
+            return;
+          }
+        }
+      })();
+    </script>
     <script src="testem.js" integrity=""></script>
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>

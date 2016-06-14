@@ -67,6 +67,7 @@
     "ember-truth-helpers": "1.2.0",
     "feedbackfruits-accounts": "feedbackfruits/feedbackfruits-ui-accounts",
     "feedbackfruits-styles": "feedbackfruits/feedbackfruits-ui-styles",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "mdl-selectfield": "^1.0.2"
   }
 }
