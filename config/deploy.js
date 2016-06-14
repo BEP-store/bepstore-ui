@@ -1,5 +1,3 @@
-var minimatch = require('minimatch');
-
 module.exports = function(deployTarget) {
   var AWS_REGION = 'eu-central-1';
   var AWS_BUCKET = 'bepstore.feedbackfruits.com';
