@@ -10,18 +10,18 @@ var defaults = {
 
   production: {
     API_HOST: 'https://bepstore-api.feedbackfruits.com',
-    API_WS_HOST: 'ws://bepstore-api.feedbackfruits.com:28080',
+    API_WS_HOST: 'wss://bepstore-api.feedbackfruits.com:28080',
     ACCOUNTS_HOST: 'https://accounts.feedbackfruits.com',
-    ACCOUNTS_WS_HOST: 'ws://accounts.feedbackfruits.com/socket',
+    ACCOUNTS_WS_HOST: 'wss://accounts.feedbackfruits.com/socket',
     ADMIN_HOST: 'https://bepstore-admin.feedbackfruits.com',
     APPSIGNAL_ENABLED: true
   },
 
   staging: {
     API_HOST: 'https://staging-bepstore-api.feedbackfruits.com',
-    API_WS_HOST: 'ws://staging-bepstore-api.feedbackfruits.com:28080',
+    API_WS_HOST: 'wss://staging-bepstore-api.feedbackfruits.com:28080',
     ACCOUNTS_HOST: 'https://staging-accounts.feedbackfruits.com',
-    ACCOUNTS_WS_HOST: 'ws://staging-accounts.feedbackfruits.com/socket',
+    ACCOUNTS_WS_HOST: 'wss://staging-accounts.feedbackfruits.com/socket',
     ADMIN_HOST: 'https://staging-bepstore-admin.feedbackfruits.com',
     APPSIGNAL_ENABLED: true
   },
