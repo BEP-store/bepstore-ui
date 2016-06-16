@@ -1,27 +1,48 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
-const { Service, inject: { service }, computed } = Ember;
+const { isPresent, Service, inject: { service }, computed } = Ember;
 
 export default Service.extend({
   cable: service(),
   session: service(),
   store: service(),
 
-  consumer: computed('session.data.authenticated.access_token', function() {
-    let consumer = this.get('_consumer');
+  sockets: computed('session.data.authenticated.access_token', function () {
     let accessToken = this.get('session.data.authenticated.access_token');
-    let url = `ws://localhost:28080${accessToken ? `?access_token=${accessToken}` : ''}`;
 
-    if (consumer) {
+    if (!isPresent(accessToken)) {
+      return [];
+    }
+
+    return config.sockets.map((socket) => {
+      let host = `${socket.host}?access_token=${accessToken}`;
+      return Object.assign({}, socket, { host });
+    });
+  }),
+
+  consumers: computed('sockets', function() {
+    let sockets = this.get('sockets');
+    return sockets.map(this.consume.bind(this));
+  }),
+
+  consume(socket) {
+    debugger;
+    let { name, host } = socket;
+    let consumers = this.get('_consumers');
+    let consumer = consumers[name];
+
+    if (isPresent(consumer)) {
       consumer.set('url', url);
       consumer.connection.reopen();
     } else {
       consumer = this.get('cable').createConsumer(url);
-      this.set('_consumer', consumer);
+      consumers[name] = consumer;
+      this.set('_consumers', consumers);
     }
 
     return consumer;
-  }),
+  },
 
   createResourceSubscriber() {
     return {
@@ -45,7 +66,13 @@ export default Service.extend({
     };
   },
 
-  subscribe(channel, subscriber) {
-    return this.get('consumer.subscriptions').create(channel, subscriber);
+  subscribe(name, channel, subscriber) {
+    let consumers = this.get('consumers');
+    let consumer = consumers[name];
+    if (!isPresent(consumer)) {
+      return;
+    }
+
+    return consumer.get('subscriptions').create(channel, subscriber);
   }
 });

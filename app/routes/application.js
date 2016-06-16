@@ -19,22 +19,23 @@ export default Route.extend(ApplicationRouteMixin, {
 
   activate() {
     this._super(...arguments);
-    this.set('_socketSubscription', this.get('socket').subscribe('GoalChannel', this.get('socket').createResourceSubscriber()));
-    setTimeout(() => {
-      let subscription = this.get('_socketSubscription');
-
-      if (!subscription) {
-        return;
-      }
-
-      this.get('_socketSubscription').perform('appear', {
-        // group_id: this.get('group.id'),
-        // activity_id: this.get('activity.id'),
-        // title: 'teilsadfiWouter'
-      });
-    }, 1000);
-
-    this.set('_socketSubscription2', this.get('socket').subscribe({channel: 'GoalChannel', id: '575961342a7175448026e542'}, this.get('socket').createResourceSubscriber()));
+    this.get('socket').subscribe('accounts', 'gitter', this.get('socket').createResourceSubscriber());
+    // this.set('_socketSubscription', this.get('socket').subscribe('GoalChannel', this.get('socket').createResourceSubscriber()));
+    // setTimeout(() => {
+    //   let subscription = this.get('_socketSubscription');
+    //
+    //   if (!subscription) {
+    //     return;
+    //   }
+    //
+    //   this.get('_socketSubscription').perform('appear', {
+    //     // group_id: this.get('group.id'),
+    //     // activity_id: this.get('activity.id'),
+    //     // title: 'teilsadfiWouter'
+    //   });
+    // }, 1000);
+    //
+    // this.set('_socketSubscription2', this.get('socket').subscribe({channel: 'GoalChannel', id: '575961342a7175448026e542'}, this.get('socket').createResourceSubscriber()));
   },
 
   deactivate() {
