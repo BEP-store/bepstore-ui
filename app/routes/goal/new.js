@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import renderGoal from 'bepstore/utils/renderGoal';
 
 const { Route, inject: { service } } = Ember;
 
@@ -6,9 +7,6 @@ export default Route.extend({
   session: service(),
 
   renderTemplate() {
-    this.render('goal.new', {
-      into: 'application',
-      outlet: 'modal'
-    });
+    renderGoal.render(this, 'goal.new', true);
   }
 });
