@@ -44,7 +44,7 @@ export default Service.extend({
       consumer.connection.reopen();
     } else {
       consumer = this.get('cable').createConsumer(host);
-      if(!!!consumers) {
+      if(!consumers) {
         consumers = {};
       }
 
