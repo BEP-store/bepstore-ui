@@ -1,0 +1,15 @@
+{{#fbf-nav type="default" _hasDrawer=isLoggedIn title="BEPStore" logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+  <div class="fbf-layout__content-header">
+    {{fbf-image src="assets/images/bep_header.png"}}
+  </div>
+  {{yield}}
+  {{else if section.isHeader}}
+    {{nav/not-loggedin-buttons}}
+  {{else if section.isDrawer}}
+    {{#if isLoggedIn}}
+      {{nav/nav-bar}}
+    {{/if}}
+  {{/if}}
+{{/fbf-nav}}
+{{add-button model=model}}
