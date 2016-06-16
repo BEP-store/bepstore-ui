@@ -23,20 +23,31 @@ export default Service.extend({
 
   consumers: computed('sockets', function() {
     let sockets = this.get('sockets');
-    return sockets.map(this.consume.bind(this));
+    let reducer = (memo, socket) => {
+      let { name } = socket;
+      let consumer = this.consume(socket);
+
+      return Object.assign({}, memo, {[name]: consumer});
+    };
+    return sockets.reduce(reducer, {});
   }),
 
   consume(socket) {
-    debugger;
     let { name, host } = socket;
     let consumers = this.get('_consumers');
-    let consumer = consumers[name];
 
-    if (isPresent(consumer)) {
-      consumer.set('url', url);
+    let consumer;
+
+    if(isPresent(consumers) && !!consumers[name]) {
+
+      consumer = consumers[name];
       consumer.connection.reopen();
     } else {
-      consumer = this.get('cable').createConsumer(url);
+      consumer = this.get('cable').createConsumer(host);
+      if(!!!consumers) {
+        consumers = {};
+      }
+
       consumers[name] = consumer;
       this.set('_consumers', consumers);
     }
@@ -69,6 +80,7 @@ export default Service.extend({
   subscribe(name, channel, subscriber) {
     let consumers = this.get('consumers');
     let consumer = consumers[name];
+
     if (!isPresent(consumer)) {
       return;
     }

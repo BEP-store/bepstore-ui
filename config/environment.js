@@ -67,11 +67,11 @@ module.exports = function(environment) {
       {
         name: 'api',
         host: getEnv('API_WS_HOST')
-      },
-      {
-        name: 'accounts',
-        host: getEnv('ACCOUNTS_WS_HOST')
-      }
+      }//,
+      // {
+      //   name: 'accounts',
+      //   host: getEnv('ACCOUNTS_WS_HOST')
+      // }
     ],
 
     'ember-simple-auth': {
