@@ -6,8 +6,8 @@ function render(route, parent, inModal){
   route.render(parent, setting);
 }
 
-export const goalFun = {
+export const renderGoal= {
  render
 };
 
-export default goalFun;
+export default renderGoal;

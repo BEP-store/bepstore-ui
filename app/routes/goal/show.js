@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import goalFun from 'bepstore/utils/goalFun';
+import renderGoal from 'bepstore/utils/renderGoal';
 
 const { Route, inject: { service } } = Ember;
 
@@ -9,6 +9,6 @@ export default Route.extend({
     return this.get('store').findRecord('goal', params.goal_id);
   },
   renderTemplate() {
-    goalFun.render(this,'goal.show', false);
+    renderGoal.render(this,'goal.show', false);
   }
 });
