@@ -2,7 +2,7 @@
 
 var defaults = {
   API_HOST: 'http://localhost.feedbackfruits.com:3000',
-  API_WS_HOST: 'ws://localhost.feedbackfruits.com:28080',
+  API_WS_HOST: 'ws://localhost.feedbackfruits.com:3000/cable',
   ACCOUNTS_HOST: 'http://localhost.feedbackfruits.com:3001',
   ACCOUNTS_WS_HOST: 'ws://localhost.feedbackfruits.com:3001/socket',
   ADMIN_HOST: 'http://localhost.feedbackfruits.com:3000/admin',
@@ -10,7 +10,7 @@ var defaults = {
 
   production: {
     API_HOST: 'https://bepstore-api.feedbackfruits.com',
-    API_WS_HOST: 'wss://bepstore-api.feedbackfruits.com:28080',
+    API_WS_HOST: 'wss://bepstore-api.feedbackfruits.com/cable',
     ACCOUNTS_HOST: 'https://accounts.feedbackfruits.com',
     ACCOUNTS_WS_HOST: 'wss://accounts.feedbackfruits.com/socket',
     ADMIN_HOST: 'https://bepstore-admin.feedbackfruits.com',
@@ -19,7 +19,7 @@ var defaults = {
 
   staging: {
     API_HOST: 'https://staging-bepstore-api.feedbackfruits.com',
-    API_WS_HOST: 'wss://staging-bepstore-api.feedbackfruits.com:28080',
+    API_WS_HOST: 'wss://staging-bepstore-api.feedbackfruits.com/cable',
     ACCOUNTS_HOST: 'https://staging-accounts.feedbackfruits.com',
     ACCOUNTS_WS_HOST: 'wss://staging-accounts.feedbackfruits.com/socket',
     ADMIN_HOST: 'https://staging-bepstore-admin.feedbackfruits.com',
