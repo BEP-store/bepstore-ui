@@ -48,8 +48,8 @@ module.exports = function(environment) {
     locationType: 'auto',
 
     // TODO: Use non-feedbackfruits client
-    clientId: "FeedbackFruits",
-    // clientId: "BEP Store",
+    // clientId: "FeedbackFruits",
+    clientId: "BEP Store",
     clientSecret: getEnv('CLIENT_SECRET'),
 
     host: getEnv('API_HOST'),
