@@ -1,15 +1,29 @@
-{{#nav/login-nav title="Login"}}
-  <div class="fbf-login-card-grid">
-    {{#each model as |idp i|}}
-      {{component 'feedbackfruits-accounts@login-identity-provider-card' model=idp}}
-    {{/each}}
-  </div>
+{{#fbf-nav type="default" title="Login" toggleTransparency=false bigHeader=false logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+    <div class="fbf-layout__content-header">
+      {{fbf-image src="assets/images/bep_header.png"}}
+    </div>
 
-  <div class="fbf-center-container">
-    <h4 class="fbf-center-container">
-      Login with email
-    </h4>
+    <div class="fbf-layout__horizontal-center-flex">
+      <div class="fbf-layout__content-container">
+        <div class="fbf-login-card-grid">
+          {{#each model as |idp i|}}
+            {{component 'feedbackfruits-accounts@login-identity-provider-card' model=idp}}
+          {{/each}}
+        </div>
 
-    {{component 'feedbackfruits-accounts@login-email-card'}}
-  </div>
-{{/nav/login-nav}}
+
+        <div class="fbf-center-container">
+          <h4 class="fbf-center-container">
+            Login with FeedbackFruits
+          </h4>
+
+          {{component 'feedbackfruits-accounts@login-email-card'}}
+        </div>
+      </div>
+    </div>
+  {{else if section.isHeader}}
+    {{#link-to 'login'}}{{#fbf-btn class="fbf-splash__call-to-action"}}Log in{{/fbf-btn}}{{/link-to}}
+    {{#link-to 'register'}}{{#fbf-btn class="fbf-splash__call-to-action" isAccent=true}}Register{{/fbf-btn}}{{/link-to}}
+  {{/if}}
+{{/fbf-nav}}

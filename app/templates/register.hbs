@@ -1,9 +1,18 @@
-{{#nav/login-nav title="Register"}}
-  <div class="fbf-center-container">
-    <h2 class="fbf-center-container" style="text-align: center">
-      Register
-    </h2>
-    {{component 'feedbackfruits-accounts@register-card'}}
-    <em> This account can also be used on FeedbackFruits </em>
-  </div>
-{{/nav/login-nav}}
+{{#fbf-nav type="default" title="Register" toggleTransparency=false bigHeader=false logo=false primaryButton="drawer" as |section|}}
+  {{#if section.isContent}}
+    <div class="fbf-layout__content-header">
+      {{fbf-image src="assets/images/bep_header.png"}}
+    </div>
+
+    <div class="fbf-layout__horizontal-center-flex">
+      <div class="fbf-layout__content-container">
+        <div class="fbf-center-container">
+          {{component 'feedbackfruits-accounts@register-card'}}
+        </div>
+      </div>
+    </div>
+  {{else if section.isHeader}}
+    {{#link-to 'login'}}{{#fbf-btn class="fbf-splash__call-to-action"}}Log in{{/fbf-btn}}{{/link-to}}
+    {{#link-to 'register'}}{{#fbf-btn class="fbf-splash__call-to-action" isAccent=true}}Register{{/fbf-btn}}{{/link-to}}
+  {{/if}}
+{{/fbf-nav}}
