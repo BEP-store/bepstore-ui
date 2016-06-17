@@ -7,7 +7,7 @@ import {
 import hbs from 'htmlbars-inline-precompile';
 
 describeComponent(
-  'nav/not-loggedin-buttons',
+  'nav/not-logged-in-buttons',
   'Integration: NavNotLoggedinButtonsComponent',
   {
     integration: true
@@ -18,12 +18,12 @@ describeComponent(
       // Handle any actions with this.on('myAction', function(val) { ... });
       // Template block usage:
       // this.render(hbs`
-      //   {{#nav/not-loggedin-buttons}}
+      //   {{#nav/not-logged-in-buttons}}
       //     template content
-      //   {{/nav/not-loggedin-buttons}}
+      //   {{/nav/not-logged-in-buttons}}
       // `);
 
-      this.render(hbs`{{nav/not-loggedin-buttons}}`);
+      this.render(hbs`{{nav/not-logged-in-buttons}}`);
       expect(this.$()).to.have.length(1);
     });
   }

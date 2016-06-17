@@ -5,7 +5,7 @@
   </div>
   {{yield}}
   {{else if section.isHeader}}
-    {{nav/not-loggedin-buttons isLoggedIn=isLoggedIn}}
+    {{nav/not-logged-in-buttons isLoggedIn=isLoggedIn}}
   {{else if section.isDrawer}}
     {{#if isLoggedIn}}
       {{nav/nav-bar}}
