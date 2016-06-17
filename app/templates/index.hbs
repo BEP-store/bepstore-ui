@@ -1,9 +1,4 @@
-
-{{#fbf-nav type="default" title="BEPStore" logo=false primaryButton="drawer" as |section|}}
-  {{#if section.isContent}}
-  <div class="fbf-layout__content-header">
-    {{fbf-image src="assets/images/bep_header.png"}}
-  </div>
+{{#nav/index-nav}}
   <div class="fbf-layout__horizontal-center-flex">
     <div class="fbf-layout__content-container fbf-layout__content--over-header">
       {{#fbf-tab-bar theme="semitransparent"}}
@@ -23,8 +18,4 @@
       {{outlet}}
     </div>
   </div>
-  {{else if section.isDrawer}}
-    {{nav/nav-bar}}
-  {{/if}}
-{{/fbf-nav}}
-{{add-button model=model}}
+{{/nav/index-nav}}

@@ -1,0 +1,4 @@
+{{#unless isLoggedIn}}
+  {{#link-to 'login'}}{{#fbf-btn class="fbf-splash__call-to-action"}}Log in{{/fbf-btn}}{{/link-to}}
+  {{#link-to 'register'}}{{#fbf-btn class="fbf-splash__call-to-action" isAccent=true}}Register{{/fbf-btn}}{{/link-to}}
+{{/unless}}
