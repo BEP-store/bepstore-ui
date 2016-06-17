@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return this.get('store').findAll('goal').then(function(goals) { return goals.sortBy('created_at').reverse(); });
+    return this.get('store').findAll('goal');
   }
 });
