@@ -4,18 +4,19 @@ import AuthenticatedRouteMixin from 'feedbackfruits-accounts/mixins/routes/authe
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   model(){
-    /* jshint ignore:start */
-    return this.get('store').findRecord('user','current')
-      .then(I => {
-        let mapFn = (goal) => {
-          return [goal, goal.get('contributors').isAny('id', I.get('id'))];
-        };
-        return this.get('store').findAll('goal').then((goals) => {
-          return Promise.all(goals.map(mapFn));
-        }).then((mygoals) => {
-          return mygoals.filter(([goal, isMine]) => isMine).map(([goal, isMine]) => goal);
-        });
-      });
-      /* jshint ignore:end */
+    return this.get('store').findAll('goal');
+    // /* jshint ignore:start */
+    // return this.get('store').findRecord('user','current')
+    //   .then(I => {
+    //     let mapFn = (goal) => {
+    //       return [goal, goal.get('contributors').isAny('id', I.get('id'))];
+    //     };
+    //     return this.get('store').findAll('goal').then((goals) => {
+    //       return Promise.all(goals.map(mapFn));
+    //     }).then((mygoals) => {
+    //       return mygoals.filter(([goal, isMine]) => isMine).map(([goal, isMine]) => goal);
+    //     });
+    //   });
+    //   /* jshint ignore:end */
   }
 });

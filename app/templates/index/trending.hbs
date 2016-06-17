@@ -1,6 +1,4 @@
 {{#fbf-text title=true}}
   Trending goals
 {{/fbf-text}}
-{{#each model as |goal|}}
-  {{component 'bepstore-goals@list-item' model=goal route="index.trending"}}
-{{/each}}
+{{component 'bepstore-goals@goal/goal-list' sortBy="contributors.length" model=model route="index.newgoals"}}

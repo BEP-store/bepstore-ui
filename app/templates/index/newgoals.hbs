@@ -1,6 +1,4 @@
 {{#fbf-text title=true}}
   New Goals
 {{/fbf-text}}
-{{#each model as |goal|}}
-  {{component 'bepstore-goals@list-item' model=goal route="index.newgoals"}}
-{{/each}}
+{{component 'bepstore-goals@goal/goal-list' model=model route="index.newgoals"}}
