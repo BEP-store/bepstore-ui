@@ -7,10 +7,6 @@ export default Route.extend(ApplicationRouteMixin, {
   session: service(),
   socket: service(),
 
-  model() {
-    return this.get('store').peekAll('chat-message');
-  },
-
   title(tokens) {
     tokens = Ember.makeArray(tokens);
     tokens.push('FeedbackFruits');
