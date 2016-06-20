@@ -8,6 +8,8 @@ export default Service.extend({
   session: service(),
   store: service(),
 
+  _consumers: {},
+
   sockets: computed('session.data.authenticated.access_token', function () {
     let accessToken = this.get('session.data.authenticated.access_token');
 
@@ -35,21 +37,17 @@ export default Service.extend({
   consume(socket) {
     let { name, host } = socket;
     let consumers = this.get('_consumers');
-
     let consumer;
 
-    if(isPresent(consumers) && !!consumers[name]) {
-
+    if ('name' in consumers) {
       consumer = consumers[name];
-      consumer.connection.reopen();
-    } else {
+    }
+    else {
       consumer = this.get('cable').createConsumer(host);
-      if(!consumers) {
-        consumers = {};
-      }
+    }
 
-      consumers[name] = consumer;
-      this.set('_consumers', consumers);
+    if (!consumer.get('connection.isOpen')) {
+      consumer.connection.reopen();
     }
 
     return consumer;
@@ -58,10 +56,11 @@ export default Service.extend({
   createResourceSubscriber() {
     return {
       connected: () => {
-        Ember.debug( "connected -> " + Ember.inspect('connected to websocket') );
+        Ember.debug( "connected -> " + Ember.inspect('connected to API websocket') );
       },
       received: message => {
         Ember.debug( "received(message) -> " + Ember.inspect(message) );
+
         if (message.action === 'create' || message.action === 'update') {
           this.get('store').pushPayload(message.payload);
         } else if (message.action === 'destroy') {
@@ -73,6 +72,50 @@ export default Service.extend({
       },
       disconnected: () => {
         Ember.debug("GoalChannel#disconnected");
+      }
+    };
+  },
+
+  createGitterSubscriber() {
+    return {
+      connected: () => {
+        Ember.debug( "connected -> " + Ember.inspect('connected to Gitter websocket') );
+      },
+      received: message => {
+        Ember.debug( "received(message) -> " + Ember.inspect(message) );
+        let store = this.get('store');
+
+        if (message.operation === 'create' && message.model.text !== '') {
+          let record = store.createRecord('chat-message', message.model);
+
+          if (message.model.room) {
+            let roomId = message.model.room.id;
+            let room = store.peekRecord('chat-room', roomId);
+
+            if (!room) {
+              room = store.createRecord('chat-room', message.model.room);
+            }
+            else {
+              room.setProperties(message.model.room);
+            }
+
+            record.set('room', room);
+          }
+
+        } else if (message.operation === 'update') {
+          let record = store.peekRecord('chat-message', message.model.id);
+          if (record && message.model.text === '') {
+            record.unloadRecord();
+          }
+          else {
+            record.setProperties(message.model);
+          }
+
+        } else if (message.operation === 'destroy') {
+        }
+      },
+      disconnected: () => {
+        Ember.debug("Gitter#disconnected");
       }
     };
   },

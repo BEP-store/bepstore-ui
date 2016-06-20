@@ -17,8 +17,10 @@ export default Route.extend(ApplicationRouteMixin, {
 
   activate() {
     this._super(...arguments);
-    // this.get('socket').subscribe('accounts', 'gitter', this.get('socket').createResourceSubscriber());
-    this.get('socket').subscribe('api', 'GoalChannel', this.get('socket').createResourceSubscriber());
+    let socket = this.get('socket');
+
+    socket.subscribe('api', 'GoalChannel', socket.createResourceSubscriber());
+    socket.subscribe('accounts', 'gitter', socket.createGitterSubscriber());
   },
 
   deactivate() {
