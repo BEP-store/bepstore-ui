@@ -32,6 +32,8 @@ Router.map(function() {
 
   this.route('logout');
 
+  this.route('overview');
+
   this.route('index', {path:'/'}, function() {
     this.route('mygoals', function() {
       this.route('goal', goal);
