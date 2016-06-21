@@ -36,6 +36,7 @@ module.exports = function(defaults) {
       enabled: isProduction,
       exclude: [
         'favicon.ico',
+        'assets/images/organizations'
       ],
       extensions: [
         'js',
