@@ -1,3 +1,47 @@
+@import '_color-definitions'
+
+// Overriding using MDL's variables. Establishing primary and
+// secondary colors (which are often the complementary branding colors) from
+// the key primary and secondary color.
+
+// Primary colors
+$color-primary: $palette-green-800
+$color-primary-dark: $palette-green-900
+$color-primary-bg: $palette-green-100
+$color-primary-bg-light: $palette-green-50
+$color-accent: $palette-blue-400
+$page-background: #eeeeee
+
+// Shades of grey
+$color-grey-dark: $palette-grey-900
+$color-grey-light: $palette-grey-500
+$color-grey-bg-very-light:  $palette-grey-50
+$color-grey-bg-light:       $palette-grey-100
+$color-grey-bg:             $palette-grey-200
+$color-grey-bg-dark:        $palette-grey-300
+$color-grey-bg-very-dark:   $palette-grey-400
+
+// Basic colors
+$color-blue: $palette-blue-400
+$color-red: $palette-red-800
+$color-purple: $palette-deep-purple-500
+$color-yellow: $palette-lime-900
+$color-green-dark: #33691E
+$color-green-bg: #558B2F
+$color-green-bg-light: #689F38
+
+// Highlights
+$color-blue-dark: $palette-blue-800
+$color-red-dark: $palette-red-800
+
+// Shadows
+$text-shadow-2dp: 0px 1px 24px rgba(0, 0, 0, 0.3)
+
+body
+  background-color: $page-background
+
+@import "material-design-lite"
+
 // Import from feedbackfruits-styles
 @import 'feedbackfruits-components'
 @import 'feedbackfruits-platform'
