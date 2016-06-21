@@ -17,7 +17,7 @@ export default Ember.Component.extend({
   statusByType: {
     working: ['building', 'testing'],
     pending: ['init', 'spec-design'],
-    done:    ['done']
+    done:    ['finished']
   },
 
   selection: computed('model','type', function() {
