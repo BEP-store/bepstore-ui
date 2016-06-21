@@ -6,9 +6,6 @@ export default Ember.Component.extend({
   session: service(),
 
   isLoggedIn: computed('session.user', function(){
-    if(this.get('session.user.id')){
-      return true;
-    }
-    return false;
-  })
+      return !!this.get('session.user.id');
+    })
 });
