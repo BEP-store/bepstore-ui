@@ -53,6 +53,7 @@
     "ember-cli-moment-shim": "1.2.0",
     "ember-cli-release": "0.2.8",
     "ember-cli-sass": "4.2.1",
+    "ember-cli-showdown": "2.7.1",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-click-outside": "0.0.3",
@@ -69,6 +70,7 @@
     "feedbackfruits-accounts": "feedbackfruits/feedbackfruits-ui-accounts",
     "feedbackfruits-styles": "feedbackfruits/feedbackfruits-ui-styles",
     "loader.js": "^4.0.1",
-    "mdl-selectfield": "^1.0.2"
+    "mdl-selectfield": "^1.0.2",
+    "showdown": "1.4.2"
   }
 }
