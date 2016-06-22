@@ -11,8 +11,8 @@ var defaults = {
   production: {
     API_HOST: 'https://bepstore-api.feedbackfruits.com',
     API_WS_HOST: 'wss://bepstore-api.feedbackfruits.com/cable',
-    ACCOUNTS_HOST: 'https://staging-accounts.feedbackfruits.com',
-    ACCOUNTS_WS_HOST: 'wss://staging-accounts.feedbackfruits.com/socket',
+    ACCOUNTS_HOST: 'https://accounts.feedbackfruits.com',
+    ACCOUNTS_WS_HOST: 'wss://accounts.feedbackfruits.com/socket',
     ADMIN_HOST: 'https://bepstore-admin.feedbackfruits.com',
     APPSIGNAL_ENABLED: true
   },
