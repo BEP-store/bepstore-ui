@@ -53,22 +53,25 @@
     "ember-cli-moment-shim": "1.2.0",
     "ember-cli-release": "0.2.8",
     "ember-cli-sass": "4.2.1",
+    "ember-cli-showdown": "2.7.1",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-click-outside": "0.0.3",
-    "ember-composability": "0.3.2",
+    "ember-composability": "0.3.5",
     "ember-data": "^2.6.1",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
-    "ember-material-lite": "0.2.2",
+    "ember-material-lite": "0.2.3",
     "ember-moment": "6.1.0",
     "ember-new-computed": "1.0.3",
+    "ember-notify": "5.1.0",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "1.1.0",
     "ember-truth-helpers": "1.2.0",
     "feedbackfruits-accounts": "feedbackfruits/feedbackfruits-ui-accounts",
     "feedbackfruits-styles": "feedbackfruits/feedbackfruits-ui-styles",
     "loader.js": "^4.0.1",
-    "mdl-selectfield": "^1.0.2"
+    "mdl-selectfield": "^1.0.2",
+    "showdown": "1.4.2"
   }
 }

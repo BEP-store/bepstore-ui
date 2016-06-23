@@ -1,15 +1,19 @@
-<h4>Welcome to the BEP Store</h4>
-
-{{#fbf-card class="welcome-message"}}
-  <div>
-    This is a platform where users of the FeedbackFruits platform can indicate what features they are missing and start working on building those features. In order to get started, login with your FeedbackFruits account, GitHub or Gitter or register a new account.
+{{#fbf-card standalone=true}}
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome to the BEP Store</h2>
   </div>
-
-  <div>
-    Once you are logged in, you can create a goal to start improving the FeedbackFruits platform. The easiest way to think of a new goal is to finish the sentence: 'With the FeedbackFruits platform I would like to be able to: ...'.
+  <div class="mdl-card__supporting-text">
+    <p>
+       This is a platform where users of the FeedbackFruits platform can indicate what features they are missing and start working on building those features. In order to get started, login with your FeedbackFruits account, GitHub or Gitter or register a new account.
+     </p><p>
+       Once you are logged in, you can create a goal to start improving the FeedbackFruits platform. The easiest way to think of a new goal is to finish the sentence: 'With the FeedbackFruits platform I would like to be able to: ...'.
+       </p><p>
+       Once you have created a goal, the next step is to find supporters. The easiest way to do this is to share your goal on social media. Supporters can help you break your goal down into challenges, create designs for features or start implementing.
+     </p>
   </div>
-
-  <div>
-    Once you have created a goal, the next step is to find supporters. The easiest way to do this is to share your goal on social media. Supporters can help you break your goal down into challenges, create designs for features or start implementing.
+  <div class="mdl-card__actions mdl-card--border">
+    {{#link-to 'index.trending'}}
+      {{mdl-button text='Get started' isColored=false}}
+    {{/link-to}}
   </div>
 {{/fbf-card}}

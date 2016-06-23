@@ -1,5 +1,18 @@
-{{mygoals/goal-mine model=model type="working"}}
+{{#if model.length}}
+  {{mygoals/goal-mine model=model type="working"}}
 
-{{mygoals/goal-mine model=model type="pending"}}
+  {{mygoals/goal-mine model=model type="pending"}}
 
-{{mygoals/goal-mine model=model type="done"}}
+  {{mygoals/goal-mine model=model type="done"}}
+{{else}}
+  {{#fbf-card standalone=true}}
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Create a goal</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <p>
+         To create your first goal, click on the big button in the bottom right corner.
+       </p>
+    </div>
+  {{/fbf-card}}
+{{/if}}

@@ -22,7 +22,8 @@
     "jquery-ui": "^1.11.4",
     "mdi": "^1.5.54",
     "jqueryui-touch-punch": "*",
-    "uri.js": "^1.18.1"
+    "uri.js": "^1.18.1",
+    "showdown": "^1.4.2"
   },
   "resolutions": {
     "material-design-lite": "~1.1.3"

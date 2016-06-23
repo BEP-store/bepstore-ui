@@ -10,7 +10,8 @@ module.exports = function(defaults) {
     dotEnv: {
       clientAllowedKeys: [
         'API_HOST',
-        'ACCOUNTS_HOST'
+        'ACCOUNTS_HOST',
+        'CLIENT_SECRET'
       ]
     },
     sassOptions: {
