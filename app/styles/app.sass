@@ -50,3 +50,13 @@ body
 @import 'bepstore-goals'
 @import 'bepstore-chat'
 @import 'bepstore-user'
+
+@media(max-width: $layout-screen-size-threshold - 1)
+ .fbf-nav--big-header .mdl-layout__header--transparent .mdl-layout__header-row
+   background-color: #2e7d32
+ .mdl-layout__content
+  padding-top: inherit !important
+ .fbf-layout--transparent-header .mdl-layout__content
+  margin-top: 0
+ .mdl-layout-title .fbf-layout-title
+  display: none
