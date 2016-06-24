@@ -84,9 +84,10 @@ export default Service.extend({
       received: message => {
         Ember.debug( "received(message) -> " + Ember.inspect(message) );
         let store = this.get('store');
+        let record = store.peekRecord('chat-message', message.model.id);
 
-        if (message.operation === 'create' && message.model.text !== '') {
-          let record = store.createRecord('chat-message', message.model);
+        if (!record && message.operation === 'create' && message.model.text !== '') {
+          record = store.createRecord('chat-message', message.model);
 
           if (message.model.room) {
             let roomId = message.model.room.id;
@@ -102,17 +103,20 @@ export default Service.extend({
             record.set('room', room);
           }
 
-        } else if (message.operation === 'update') {
-          let record = store.peekRecord('chat-message', message.model.id);
-          if (record && message.model.text === '') {
-            record.unloadRecord();
-          }
-          else {
-            record.setProperties(message.model);
-          }
-
-        } else if (message.operation === 'destroy') {
+          return;
         }
+
+        if (record && message.operation === 'update' && message.model.text !== '') {
+          record.setProperties(message.model);
+          return;
+        }
+
+        if (record && message.operation === 'update') {
+          record.unloadRecord();
+          return;
+        }
+
+        return;
       },
       disconnected: () => {
         Ember.debug("Gitter#disconnected");
